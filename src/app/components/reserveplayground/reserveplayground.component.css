@@ -1,0 +1,18 @@
+.reservePlayground
+{
+    margin-top: 100px;
+}
+
+.reservePlayground span
+{
+    color: #f59a28;
+}
+
+button
+{
+    margin-top: 60%;
+    margin-left: 35%;
+    padding: 25px 55px;
+    border: none;
+    border-radius: 38%;
+}

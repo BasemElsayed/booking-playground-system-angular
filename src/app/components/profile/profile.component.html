@@ -1,0 +1,98 @@
+<app-navbar></app-navbar>
+
+<section class="profile" style="background-image: url('assets/images/signupBackground.jpg'); background-color: rgba(0, 0, 0, 0.6);                                                    background-blend-mode: overlay; background-size: cover;">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="sliderProfile">
+        <img src="{{ data.personalImageUrl }}" class="img-fluid" alt="Responsive image">
+        <h4>{{ data.name }}</h4>
+        <small><span>Created at : </span>{{ data.created_at }} </small>
+        <div class="clearfix"></div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Edit Profile</button>
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <ul class="list-group list-group-flush text-left">
+        <li class="list-group-item"><span>Email : </span>{{ data.email }}</li>
+        <li class="list-group-item"><span>Phone : </span>{{ data.phone }}</li>
+        <li class="list-group-item"><span>City : </span>{{ data.city }}</li>
+        <li class="list-group-item"><span>Address : </span>{{ data.address }}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+
+      <div class="modal-body">
+        
+
+        <form>
+          <h4 class="text-center">Enjoy <span>Your</span> Jourey</h4>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Username" name="name" [(ngModel)]="data.name">
+            <ul>
+              <li *ngFor='let error of errorName'> *{{ error }} </li>
+            </ul>
+          </div>
+            <div class="form-group">
+              <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" name="email" [(ngModel)]="data.email">
+              <ul>
+                <li *ngFor='let error of errorEmail'> *{{ error }} </li>
+              </ul>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="data.password">
+              <ul>
+                <li *ngFor='let error of errorPassword'> *{{ error }} </li>
+              </ul>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Confirm Password" name="c_password" [(ngModel)]="data.c_password">
+              <ul>
+                <li *ngFor='let error of errorCPassword'> *{{ error }} </li>
+              </ul>
+            </div>
+        
+            
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Phone" name="phone" [(ngModel)]="data.phone">
+              <ul>
+                <li *ngFor='let error of errorPhone'> *{{ error }} </li>
+              </ul>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Address" name="address" [(ngModel)]="data.address">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="City" name="city" [(ngModel)]="data.city">
+            </div>
+            
+            <div class="form-group">
+              <span>Profile Picture</span>
+              <br>
+              <input class="fileChooser" type="file" name="personalImageUrl" (change)="uploadImage($event)">
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block" (click)="editProfile()">Save Changes</button>
+        </form>
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

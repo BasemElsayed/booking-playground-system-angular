@@ -1,0 +1,140 @@
+.profile
+{
+    height: 100vh;
+    text-align: center;
+}
+.profile .row
+{
+    margin-right: 0;
+}
+.profile .sliderProfile
+{
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    
+}
+
+.profile .sliderProfile img
+{
+    width: 250px;
+    height: 250px;
+    margin-top: 120px;
+    border: 2px solid #ff8b38;
+    border-radius: 50%;
+    margin-left: auto;
+}
+.profile .sliderProfile h4
+{
+    margin-top: 25px;
+    color: #ff8b38;  
+}
+
+
+.profile .sliderProfile button
+{
+    margin-top: 50px;
+    margin-left: 15px;
+}
+.list-group
+{
+    margin-top: 160px;
+    margin-left: -30px;
+}
+
+.list-group-item
+{
+    background-color: rgba(0,0,0,0.5);
+    border-bottom: 1px solid #ff8b38;
+    padding: 20px 30px;
+}
+span
+{
+    color: #ff8b38;
+}
+.list-group-item span
+{
+    margin-right: 20px;
+}
+.list-group-item,
+small
+{
+    color: #FFF;
+}
+
+
+
+
+.modal-content
+{
+    background-color: transparent;
+}
+.modal-footer
+{
+    border: 0;
+}
+
+form
+{
+    background-color: white;
+    border-radius: 20px;
+}
+
+
+form h4
+{
+    background-color: #f5f5f5;
+    padding: 18px 0;
+    margin-bottom: 35px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+form h4 span
+{
+    color: #ff8b38
+}
+
+form .form-control
+{
+    width: 75%;
+    margin: auto;
+    border: 0;
+    border-bottom: 1px solid #d6d6d6;
+    border-radius: 0;
+    padding-left: 10px;
+    margin-bottom: 20px; 
+}
+
+form .form-group ul
+{
+    list-style-type: none;
+}
+
+form .form-group ul li
+{
+    margin-left: 20px;
+    color: #f10000;
+    font-size: 14px;
+}
+
+form button
+{
+    border: 0;
+    border-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 14px 0px;
+    margin-top: 45px;
+    background-color: #ff8b38;
+}
+
+.form-group span
+{
+    display: block;
+    margin-left: 60px;
+    color: #7d7d7d;
+}
+.fileChooser
+{
+    margin-left: 60px;
+}

@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+
+<section class="reservePlayground">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+
+          <div class="card mb-3">
+            <img class="card-img-top" src="{{ playground.imageURL }}" alt="Card image cap">
+            <div class="card-body">
+                <div class="alert alert-primary" role="alert">
+                    Available From: {{ playground.avaiableFrom }}  <br>
+                    Available To : {{ playground.avaiableTo }}
+                  </div>
+              <h5 class="card-title"><span>Name :</span> {{ playground.name }}</h5>
+              <p class="card-text"><span>Description :</span> {{playground.description}}</p>
+              <p class="card-text"><span>address :</span> {{playground.address}}</p>
+              <p class="card-text"><span>area :</span> {{playground.area}}</p>
+              <p class="card-text"><span>price :</span> {{playground.price}}</p>
+              <p class="card-text"><small class="text-muted"><span>Last updated :</span> {{ playground.updated_at }}</small></p>
+            </div>
+          </div>
+
+      </div>
+
+      <div class="col-md-4">
+        <div *ngIf="checkToken; else elseBlock">
+            <app-book-playground></app-book-playground>
+        </div>
+        <ng-template #elseBlock><button class="btn btn-warning" ><a routerLink="/signUp" style="text-decoration: none; color:#FFF;">Sign Up To Reserve Playground</a></button></ng-template>
+        
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<app-footer></app-footer>
+

@@ -1,0 +1,75 @@
+<app-navbar></app-navbar>
+
+<div class="title"><h2 class="text-center">Sign Up For Free Now</h2></div>
+
+
+<section class="register" style="background: url('assets/images/signupBackground.jpg'); background-size: cover; background-attachment: fixed;
+                                background-color: rgba(0, 0, 0, 0.6); background-blend-mode: overlay;">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5" style="margin: auto">
+          <form>
+            <h4 class="text-center">Enjoy <span>Your</span> Jourey</h4>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Username" name="name" [(ngModel)]="data.name">
+              <ul>
+                <li *ngFor='let error of errorName'> *{{ error }} </li>
+              </ul>
+            </div>
+              <div class="form-group">
+                <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" name="email" [(ngModel)]="data.email">
+                <ul>
+                    <li *ngFor='let error of errorEmail'> *{{ error }} </li>
+                  </ul>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="data.password">
+                <ul>
+                    <li *ngFor='let error of errorPassword'> *{{ error }} </li>
+                  </ul>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" placeholder="Confirm Password" name="c_password" [(ngModel)]="data.c_password">
+                <ul>
+                    <li *ngFor='let error of errorCPassword'> *{{ error }} </li>
+                  </ul>
+              </div>
+          
+              
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Phone" name="phone" [(ngModel)]="data.phone">
+                <ul>
+                    <li *ngFor='let error of errorPhone'> *{{ error }} </li>
+                  </ul>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Address" name="address" [(ngModel)]="data.address">
+                <ul>
+                    <li *ngFor='let error of errorAddress'> *{{ error }} </li>
+                  </ul>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="City" name="city" [(ngModel)]="data.city">
+                <ul>
+                    <li *ngFor='let error of errorCity'> *{{ error }} </li>
+                  </ul>
+              </div>
+              
+              <div class="form-group">
+                <span>Profile Picture</span>
+                <br>
+                <input class="fileChooser" type="file" name="personalImageUrl" (change)="uploadImage($event)" #fileInput>
+              </div>
+
+
+
+              <button type="submit" class="btn btn-primary btn-block" (click)="register()">Submit</button>
+          </form>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<app-footer></app-footer>

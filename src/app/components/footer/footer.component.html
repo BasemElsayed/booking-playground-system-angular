@@ -1,0 +1,15 @@
+<footer>
+    <ul>
+        <li>
+          <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li>
+          <a *ngIf="checkToken; else elseBlock"></a>
+          <ng-template #elseBlock><a class="nav-link" routerLink="/signUp">Sign Up</a></ng-template>
+        </li>
+        <li>
+          <a class="nav-link" routerLink="/myBookings" *ngIf="checkToken">My Bookings</a>
+        </li>
+    </ul>
+    <small>Copyright © 2018, Thomson Reuters. All rights reserved.</small>
+</footer>

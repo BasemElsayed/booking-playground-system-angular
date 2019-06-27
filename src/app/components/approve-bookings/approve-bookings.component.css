@@ -1,0 +1,15 @@
+.viewUnapproveBookings
+{
+    margin-top: 100px;
+}
+
+.viewUnapproveBookings span
+{
+    color: #f59a28;
+}
+
+.viewUnapproveBookings .go
+{
+    background-color: #f59a28;
+    border: 0;
+}

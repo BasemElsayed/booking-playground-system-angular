@@ -1,0 +1,30 @@
+<app-admin-navigation></app-admin-navigation>
+
+<section class="viewMyBookings">
+  <div class="container">
+    <div class="row">
+        
+      <div class="col-md-6" *ngFor='let object of dataArray'>
+
+          <div class="card mb-5">
+            <img class="card-img-top" src="{{ object.imageURL }}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><span>Playground Name : </span>{{ object.name }}</h5>
+              <p class="card-text"><span>Booked Date From : </span>{{ object.bookedDateFrom }}</p>
+              <p class="card-text"><span>Booked Date To : </span>{{ object.bookedDateTo }}</p>
+              <p class="card-text"><span>Booked Time From : </span>{{ object.bookedTimeFrom }}</p>
+              <p class="card-text"><span>Booked Time To : </span>{{ object.bookedTimeTo }}</p>
+              <p class="card-text"><span>Price : </span>{{ object.price }}</p>
+              <p class="card-text"><span>Approved From Admin : </span>{{ object.approved }}</p>
+              <p class="card-text"><small class="text-muted"><span>Reservation Time : </span>{{ object.created_at }}</small></p>
+            </div>
+          </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<app-footer-admin></app-footer-admin>

@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+
+<section class="viewMyBookings">
+  <div class="container">
+    <div class="row">
+        
+      <div class="col-md-6" *ngFor='let object of dataArray'>
+
+          <div class="card mb-5">
+            <img class="card-img-top" src="{{ object.imageURL }}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><span>Playground Name : </span>{{ object.name }}</h5>
+              <p class="card-text"><span>Booked Date From : </span>{{ object.bookedDateFrom }}</p>
+              <p class="card-text"><span>Booked Date To : </span>{{ object.bookedDateTo }}</p>
+              <p class="card-text"><span>Booked Time From : </span>{{ object.bookedTimeFrom }}</p>
+              <p class="card-text"><span>Booked Time To : </span>{{ object.bookedTimeTo }}</p>
+              <p class="card-text"><span>Price : </span>{{ object.price }}</p>
+              <p class="card-text"><span>Approved From Admin : </span>{{ object.approved }}</p>
+              <p class="card-text"><small class="text-muted"><span>Reservation Time : </span>{{ object.created_at }}</small></p>
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="Approve(object.id)">Cancel Reservation</button>
+            </div>
+          </div>
+
+
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Requesting...</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="alert alert-danger" role="alert">
+                          {{ error }}                      
+                        </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="reloadPage()">Ok</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<app-footer></app-footer>

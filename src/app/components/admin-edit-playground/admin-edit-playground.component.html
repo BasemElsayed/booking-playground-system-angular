@@ -1,0 +1,53 @@
+<app-admin-navigation></app-admin-navigation>
+
+<section class="addPlayground" style="background: url('assets/images/signupBackground.jpg'); background-size: cover; background-attachment: fixed;
+                                background-color: rgba(0, 0, 0, 0.6); background-blend-mode: overlay;">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5" style="margin: auto">
+          <form>
+            <h4 class="text-center">Edit <span>Playground</span></h4>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Playground Name" name="name" [(ngModel)]="data.name">
+            </div>
+            
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Description" name="description" [(ngModel)]="data.description">
+            </div>
+
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Address" name="address" [(ngModel)]="data.address">
+            </div>
+
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Area" name="area" [(ngModel)]="data.area">
+            </div>
+
+            <div class="form-group">
+              <input type="time" class="form-control" placeholder="Avaiable From" name="avaiableFrom" [(ngModel)]="data.avaiableFrom">
+            </div>
+
+            <div class="form-group">
+              <input type="time" class="form-control" placeholder="Avaiable To" name="avaiableTo" [(ngModel)]="data.avaiableTo">
+            </div>
+
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Price" name="price" [(ngModel)]="data.price">
+            </div>
+
+            <div class="form-group">
+              <span>Profile Picture</span>
+              <br>
+              <input class="fileChooser" type="file" id="avatar" name="imageURL" accept="image/png, image/jpeg" (change)="uploadImage($event)">
+            </div>
+            
+              <button type="submit" class="btn btn-primary btn-block" (click)="editPlayground()">Submit</button>
+          </form>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<app-footer-admin></app-footer-admin>

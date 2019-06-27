@@ -1,0 +1,26 @@
+.navbar-light
+{
+    background-color: #000000;
+    color: aliceblue;
+}
+
+.navbar-light .navbar-brand
+{
+    color: aliceblue
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link,
+.navbar-light .navbar-nav .nav-link
+{
+    color: #f59a28;
+    margin-left: 18px;
+    font-size: 18px;
+}
+.navbar-brand img
+{
+    width: 28%;
+    height: 50px;
+}

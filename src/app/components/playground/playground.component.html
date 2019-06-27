@@ -1,0 +1,23 @@
+
+
+<section class="viewPlaygrounds">
+  <div class="container">
+    <div class="title"><h2 class="text-center">Browse Playgrounds</h2></div>
+
+    <div class="row">
+
+      <div class="col-md-4" *ngFor='let playground of playgrounds'>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{{ playground['imageURL'] }}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{ playground["name"] }}</h5>
+            <p class="card-text">{{ playground["description"] }}</p>
+            <button class="btn btn-primary go" (click)="redirectToSpecificPlayground(playground['id'])">Go somewhere</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
